@@ -1,0 +1,167 @@
+.elements {
+  max-width: 880px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.elements__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 282px);
+  gap: 20px 17px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  justify-content: center;
+  justify-items: center;
+}
+
+.elements__card {
+  display: flex;
+  flex-direction: column;
+  width: 282px;
+  height: 361px;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.elements__image {
+  width: 282px;
+  height: 282px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.elements__info {
+  max-width: 246px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 25px 15px 31px 21px;
+}
+
+.elements__text {
+  margin: 0;
+  width: 92.55%;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.elements__like {
+  background-image: url("../images/like.png");
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  padding: 0;
+  width: 21px;
+  height: 19px;
+  cursor: pointer;
+}
+
+.elements__like:hover {
+  opacity: 0.6;
+}
+
+.elements__like_active {
+  background-image: url("../images/like-activated.svg");
+}
+
+.elements__delete {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  background: transparent url("../images/Trash.png") center no-repeat;
+  border: none;
+  width: 18px;
+  height: 19px;
+  cursor: pointer;
+}
+
+.elements__delete:hover {
+  opacity: 0.6;
+}
+
+/* ----- Mobile (até 320px) ----- */
+@media screen and (max-width: 320px) {
+  .elements {
+    padding-top: 36px;
+  }
+
+  .elements__cards {
+    grid-template-columns: 1fr;
+    gap: 13px 12px;
+    justify-items: center;
+  }
+
+  .elements__card {
+    width: 100%;
+    max-width: 282px;
+    height: auto;
+  }
+
+  .elements__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .elements__info {
+    padding: 20px 16px;
+  }
+
+  .elements__text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .elements__like {
+    width: 18px;
+    height: 16px;
+  }
+}
+
+/* ----- Tablet (até 768px) ----- */
+@media screen and (max-width: 768px) {
+  .elements {
+    padding-top: 20px;
+  }
+
+  .elements__cards {
+    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+    gap: 15px 14px;
+    justify-content: center;
+  }
+
+  .elements__card {
+    width: 100%;
+    max-width: 282px;
+    height: auto;
+  }
+
+  .elements__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .elements__info {
+    padding: 10px;
+  }
+
+  .elements__text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .elements__like {
+    width: 20px;
+    height: 18px;
+  }
+}

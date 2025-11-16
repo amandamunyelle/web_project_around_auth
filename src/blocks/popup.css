@@ -1,0 +1,252 @@
+.popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  inset: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.popup_opened {
+  display: flex;
+  /*opacity: 1;*/
+  /*visibility: visible;*/
+}
+
+.popup__container {
+  width: 100%;
+  max-width: 430px;
+  background-color: white;
+  color: black;
+  position: relative;
+  border-radius: 10px;
+  padding: 34px 36px 36.5px;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+}
+
+.popup__close {
+  color: rgba(255, 255, 255, 1);
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -32px;
+  right: -32px;
+  cursor: pointer;
+}
+
+.popup__close:hover {
+  opacity: 0.6;
+}
+
+.popup__close-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  display: block;
+}
+
+.popup__title {
+  margin: 0;
+  padding: 0 0 24px 0;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29.05px;
+  letter-spacing: 0;
+}
+
+.popup__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.popup__input {
+  width: 100%;
+  height: 27.34px;
+  margin: 0 auto;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.popup__submit {
+  width: 100%;
+  height: 50.15px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: #fff;
+  padding: 13.5px 0;
+  border-radius: 2px;
+}
+
+.popup__submit:hover {
+  opacity: 0.8;
+}
+
+.popup__submit:disabled {
+  background-color: #777;
+  cursor: default;
+  opacity: 0.8;
+}
+
+.popup__form-error {
+  color: red;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.popup-image {
+  background-color: rgba(0, 0, 0, 0.8);
+  /*display: none;*/
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
+.popup-image__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  width: 95vw;
+  height: 95vh;
+  z-index: 1001;
+}
+
+.popup-image__img {
+  width: 100%;
+  max-width: 816px;
+  max-height: 540px;
+  object-fit: contain;
+}
+
+.popup__caption {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  color: #ffffff;
+}
+
+.popup-image__close-button {
+  background-image: url("../images/close-button.png");
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  z-index: 1002;
+}
+
+.popup.popup_opened {
+  display: flex;
+}
+
+.popup_type_confirm {
+  max-width: 430px;
+  max-height: 181px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+@media screen and (max-width: 320px) {
+  .popup__container {
+    width: 90%;
+    height: auto;
+    padding: 20px 15px;
+  }
+
+  .popup__title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .popup__input {
+    font-size: 14px;
+  }
+
+  .popup__submit {
+    padding: 14px 40%;
+    width: auto;
+    /margin-top: 30px;
+  }
+
+  .popup__close {
+    top: -32px;
+    right: -32px;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.popup__caption {
+  font-size: 10px;
+  line-height: 12px;
+  margin-top: 8px;
+}
+
+.popup-image__close-button {
+  top: -40px;
+  right: 0;
+  width: 26px;
+  height: 26px;
+}
+
+@media screen and (max-width: 768px) {
+  .popup__container {
+    width: 85%;
+    padding: 20px 20px;
+  }
+
+  .popup__submit {
+    padding: 14px 25%;
+    width: auto;
+  }
+
+  .popup__input {
+    font-size: 14px;
+  }
+
+  .popup__close {
+    top: -32px;
+    right: -32px;
+    width: 30px;
+    height: 30px;
+  }
+  .popup-image__img {
+    max-width: 90vw;
+    max-height: 70vh;
+  }
+
+  .popup-image__close-button {
+    top: -50px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+  }
+}
