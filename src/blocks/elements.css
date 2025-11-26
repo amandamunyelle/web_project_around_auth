@@ -54,7 +54,7 @@
 }
 
 .elements__like {
-  background-image: url("../images/like.png");
+  background-image: url("/src/images/like.png");
   background-color: #fff;
   background-repeat: no-repeat;
   background-size: contain;
@@ -70,14 +70,14 @@
 }
 
 .elements__like_active {
-  background-image: url("../images/like-activated.svg");
+  background-image: url("/src/images/like-activated.svg");
 }
 
 .elements__delete {
   position: absolute;
   top: 18px;
   right: 15px;
-  background: transparent url("../images/Trash.png") center no-repeat;
+  background: transparent url("/src/images/Trash.png") center no-repeat;
   border: none;
   width: 18px;
   height: 19px;

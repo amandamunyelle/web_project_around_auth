@@ -149,7 +149,7 @@
 }
 
 .popup-image__close-button {
-  background-image: url("../images/close-button.png");
+  background-image: url("/src/images/close-button.png");
   position: absolute;
   top: 10px;
   right: 10px;
